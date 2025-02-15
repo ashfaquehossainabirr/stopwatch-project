@@ -1,0 +1,98 @@
+/* Google fonts import link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("./images/background.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.wrapper {
+  user-select: none;
+  z-index: 1;
+}
+
+.wrapper::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.wrapper .time {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.wrapper .time span {
+  width: 100px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.time span.colon {
+  width: 10px;
+}
+
+.time span.ms-colon,
+.time span.millisecond {
+  color: dodgerblue;
+}
+
+.wrapper .buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.buttons button {
+  padding: 6px 16px;
+  outline: none;
+  border: none;
+  margin: 0 5px;
+  color: #fff;
+  background: #333;
+  font-size: 19px;
+  font-weight: 500;
+  border-radius: 10px;
+  border: 1px solid hsl(0, 0%, 85%);
+  cursor: pointer;
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.09);
+}
+
+.buttons button:active {
+  background: #000;
+}
+
+.buttons button.active,
+.buttons button.stopActive {
+  pointer-events: none;
+  opacity: 0.7;
+}
